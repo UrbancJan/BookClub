@@ -6,8 +6,12 @@
 	<p>Posted by <%= @book.user.email%> <%= time_ago_in_words(@book.created_at) %> ago</p>
 <%= image_tag @book.image.url(:medium) %> <br>
 <%= link_to 'Back', books_path %> |
+<% if user_signed_in? %>
+<% if @book.user_id == current_user.id %>
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%end%>
+<%end%>
 </div>
 
 <div class="ad-right">
