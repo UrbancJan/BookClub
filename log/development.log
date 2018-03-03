@@ -1,0 +1,1649 @@
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-03 18:11:49 +0100
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.9) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.9) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.9) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.9) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.9) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.9) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.9) lib/rails/engine.rb:518:in `call'
+  railties (4.2.9) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/jan/.rvm/rubies/ruby-2.3.6/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/jan/.rvm/rubies/ruby-2.3.6/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/jan/.rvm/rubies/ruby-2.3.6/lib/ruby/2.3.0/webrick/server.rb:314:in `block in start_thread'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (7.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.9ms)
+  [1m[36m (66.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateBooks (20180219170237)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "books" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180219170237"]]
+  [1m[35m (12.9ms)[0m  commit transaction
+Migrating to AddAttachmentImageToBooks (20180220074923)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "books" ADD "image_file_name" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "books" ADD "image_content_type" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "books" ADD "image_file_size" integer
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "books" ADD "image_updated_at" datetime[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180220074923"]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Migrating to DeviseCreateUsers (20180302132906)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180302132906"]]
+  [1m[35m (40.4ms)[0m  commit transaction
+Migrating to AddUserIdToBooks (20180302143701)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "books" ADD "user_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180302143701"]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-03 18:13:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 2708ms (Views: 2683.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:13:29 +0100
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-03-03 18:13:33 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (7.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 174ms (Views: 148.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-03 18:13:35 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQtvLLwCLbOMuuq+h7ZJmriR7f/rMsXq4Uz1K7ynboLyo14hTV6aooAbXR8eMXx2bmPH6s+9fwH+Dht8C3+H/Q==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "a@a"]]
+Completed 401 Unauthorized in 16ms (ActiveRecord: 4.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQtvLLwCLbOMuuq+h7ZJmriR7f/rMsXq4Uz1K7ynboLyo14hTV6aooAbXR8eMXx2bmPH6s+9fwH+Dht8C3+H/Q==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 356ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-03-03 18:13:38 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kOieBjLS3AT9teUPSu9X4YNnL5Aw9r6DTn9MXfasxLpbQK8Lw45rFfEUUq7TaGINVZUFhRR5BGhRPaIKQXQtxQ==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "a@a"]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kOieBjLS3AT9teUPSu9X4YNnL5Aw9r6DTn9MXfasxLpbQK8Lw45rFfEUUq7TaGINVZUFhRR5BGhRPaIKQXQtxQ==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/sessions/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 333ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-03-03 18:13:40 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/devise-4.4.1/app/views/devise/registrations/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-03-03 18:13:44 +0100
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VB0co38t8AwINuB88zdxNzDQtCK6PkrgLD9hixowv4+ftS2ujnFHHQSXV91qsETb5iKeN56x8AszfY/crehW8A==", "user"=>{"email"=>"a@a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'a@a' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "a@a"], ["encrypted_password", "$2a$11$Vn4wpzh/SfUFipw5MTUsiukJ/iHH80YFyOT2T4QeKn9aeCIqyZUZu"], ["created_at", "2018-03-03 17:13:44.564292"], ["updated_at", "2018-03-03 17:13:44.564292"]]
+  [1m[35m (6.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2018-03-03 17:13:44.575338"], ["current_sign_in_at", "2018-03-03 17:13:44.575338"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-03-03 17:13:44.576439"], ["id", 1]]
+  [1m[36m (103.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 450ms (ActiveRecord: 112.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-03 18:13:44 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2018-03-03 18:13:45 +0100
+Processing by BooksController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered books/_form.html.erb (9.3ms)
+  Rendered books/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 74ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2018-03-03 18:14:00 +0100
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"235WmyCbuvnXDzarDaCxWAjZOMnf0H6PqJjTm1v7DHwQ1meW0ccN6NuugQqUJ4S03isS3PtfxGS32j3M7CPlAw==", "book"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe55e5c3b18 @tempfile=#<Tempfile:/tmp/RackMultipart20180303-6448-1t25yy0.png>, @original_filename="og.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[image]\"; filename=\"og.png\"\r\nContent-Type: image/png\r\n">, "title"=>"apple", "author"=>"lul", "description"=>"rdgyrygd"}, "commit"=>"Create Book"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+[paperclip] Trying to link /tmp/RackMultipart20180303-6448-1t25yy0.png to /tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png
+[paperclip] Trying to link /tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png to /tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1k0qaah.png
+Command :: file -b --mime '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1k0qaah.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]'
+Command :: convert '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]' -auto-orient -resize "300x300>" '/tmp/ae86a392cd870a6baf36924010058cc020180303-6448-1y7nu2a'
+[paperclip] Trying to link /tmp/ae86a392cd870a6baf36924010058cc020180303-6448-1y7nu2a to /tmp/fadf4a4c2f39a3839962142d445e969e20180303-6448-1roove0
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]'
+Command :: convert '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png[0]' -auto-orient -resize "100x100>" '/tmp/ae86a392cd870a6baf36924010058cc020180303-6448-1s37tv3'
+[paperclip] Trying to link /tmp/ae86a392cd870a6baf36924010058cc020180303-6448-1s37tv3 to /tmp/db657886b527151581839b9d7f2dad2320180303-6448-za8zzs
+  [1m[35m (0.1ms)[0m  begin transaction
+[paperclip] Trying to link /tmp/5bc3c1d52024c150581c7651627304b720180303-6448-1ag4d53.png to /tmp/5bc3c1d52024c150581c7651627304b720180303-6448-11h3aiv.png
+Command :: file -b --mime '/tmp/5bc3c1d52024c150581c7651627304b720180303-6448-11h3aiv.png'
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "books" ("title", "author", "description", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "apple"], ["author", "lul"], ["description", "rdgyrygd"], ["image_file_name", "og.png"], ["image_content_type", "image/png"], ["image_file_size", 95279], ["image_updated_at", "2018-03-03 17:14:00.257761"], ["user_id", 1], ["created_at", "2018-03-03 17:14:00.888336"], ["updated_at", "2018-03-03 17:14:00.888336"]]
+  [1m[35m (132.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 801ms (ActiveRecord: 134.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:14:01 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 40ms (Views: 31.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-03 18:14:03 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:14:04 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateComments (20180303171505)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "book_id" integer, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_comments_on_book_id" ON "comments" ("book_id")[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20180303171505"]]
+  [1m[36m (18.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_book_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:15:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered books/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 831ms (Views: 776.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 18:15:16 +0100
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:24:47 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (14.5ms)
+  Rendered books/show.html.erb within layouts/application (28.4ms)
+Completed 401 Unauthorized in 99ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `comment' for #<Book:0x0000000003f8d010>
+Did you mean?  comments
+               comments=):
+    1: <%= form_for([@book, @book.comment.build]) do |f| %>
+    2:   
+    3: 
+    4:   <div class="field">
+  app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3016087272689931597_32784640'
+  app/views/books/show.html.erb:30:in `_app_views_books_show_html_erb___2574814756094509141_33180720'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (74.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.8ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:25:15 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (114.6ms)
+  Rendered books/show.html.erb within layouts/application (120.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 545ms (Views: 541.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:16 +0100
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:25:31 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (5.1ms)
+  Rendered books/show.html.erb within layouts/application (9.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:31 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:31 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:31 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:25:32 +0100
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered collection (0.1ms)
+  Rendered comments/_form.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:29:30 +0100
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 18:29:36 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jVNLwbWroA8ZZqBU2FJIMJOojVS9DUXOGcd0b2dAgOdG+3rMRPcXHhXHF/VB1X3cRVqnQZmC/yUGhZo40JhpmA==", "comment"=>{"content"=>"dsf"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "dsf"], ["book_id", 1], ["created_at", "2018-03-03 17:29:36.971008"], ["updated_at", "2018-03-03 17:29:36.971008"]]
+  [1m[36m (6.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["user_id", 1], ["updated_at", "2018-03-03 17:29:36.985367"], ["id", 1]]
+  [1m[36m (73.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 95ms (ActiveRecord: 81.6ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:29:37 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.3ms)
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered books/show.html.erb within layouts/application (8.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 18:29:39 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7tCm9B8/algaY9Tj6ejArrxSyCJU3fS2eT+kIu5EJMAleJf57mPdSRbCY0Jwb/VCaqDiN3BSTl1mfUp1WZzNvw==", "comment"=>{"content"=>"sfsf"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "sfsf"], ["book_id", 1], ["created_at", "2018-03-03 17:29:39.703793"], ["updated_at", "2018-03-03 17:29:39.703793"]]
+  [1m[35m (7.4ms)[0m  commit transaction
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?[0m  [["user_id", 1], ["updated_at", "2018-03-03 17:29:39.719087"], ["id", 2]]
+  [1m[35m (6.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 31ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:29:39 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (1.7ms)
+  Rendered books/show.html.erb within layouts/application (17.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 18:29:44 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vo+yHctpmS3y0IBXjvKS6/PwgLKOKkA79dybp1epgiidJ4MQOjUuPP5xN/YXdacHJQKqp6ql+tDqnnXw4HFrVw==", "comment"=>{"content"=>"sdfsdf"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "sdfsdf"], ["book_id", 1], ["created_at", "2018-03-03 17:29:44.559436"], ["updated_at", "2018-03-03 17:29:44.559436"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["user_id", 1], ["updated_at", "2018-03-03 17:29:44.578464"], ["id", 3]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 34ms (ActiveRecord: 24.2ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:29:44 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (3.6ms)
+  Rendered books/show.html.erb within layouts/application (16.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 73ms (Views: 69.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-03-03 18:30:01 +0100
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (3.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:30:04 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (5.3ms)
+  Rendered books/show.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 58ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 18:31:57 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pq7TxwAKS3C46pjcDvhAc6/+jEcgu1oPMOfa5smW1Qb1BuLK8Vb8YbRLL32Xf3WfeQymUgQ04OQvpTSxfk48eQ==", "comment"=>{"content"=>"rrrr"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[35mBook Load (1.5ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "rrrr"], ["book_id", 1], ["created_at", "2018-03-03 17:31:57.432152"], ["updated_at", "2018-03-03 17:31:57.432152"]]
+  [1m[36m (58.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["user_id", 1], ["updated_at", "2018-03-03 17:31:57.498133"], ["id", 4]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 82ms (ActiveRecord: 69.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:31:57 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (11.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:32:03 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (1.2ms)
+  Rendered books/show.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 18:32:11 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ax4Vw4PkmeVra1ibxvFB/AkUuJuR5aLX0x4L1kbzBVLItiTOcrgu9GfK7zpfdnQQ3+aSjrVqGDzMXOWB8SvsLQ==", "comment"=>{"content"=>"eregerg"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  INSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "eregerg"], ["book_id", 1], ["created_at", "2018-03-03 17:32:11.333352"], ["updated_at", "2018-03-03 17:32:11.333352"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["user_id", 1], ["updated_at", "2018-03-03 17:32:11.353347"], ["id", 5]]
+  [1m[36m (7.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 34ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:32:11 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.1ms)
+  Rendered comments/_form.html.erb (4.0ms)
+  Rendered books/show.html.erb within layouts/application (11.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2018-03-03 18:32:22 +0100
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered books/_form.html.erb (14.9ms)
+  Rendered books/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 60ms (Views: 49.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2018-03-03 18:32:25 +0100
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:32:26 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.2ms)
+  Rendered comments/_form.html.erb (5.2ms)
+  Rendered books/show.html.erb within layouts/application (15.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (1.0ms)
+  Rendered books/show.html.erb within layouts/application (21.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 65ms (Views: 63.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 18:36:44 +0100
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 18:37:44 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered comments/_form.html.erb (8.4ms)
+  Rendered comments/edit.html.erb within layouts/application (9.5ms)
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    1: <%= form_for([@book, @book.comments.build]) do |f| %>
+    2:   
+    3: 
+    4:   <div class="field">
+  app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3016087272689931597_69959702385240'
+  app/views/comments/edit.html.erb:3:in `_app_views_comments_edit_html_erb___296366084575009435_35083080'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (5.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.5ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 18:56:34 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered comments/_form.html.erb (6.2ms)
+  Rendered comments/edit.html.erb within layouts/application (11.1ms)
+Completed 401 Unauthorized in 30ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    1: <%= form_for([@book, @book.comments.build]) do |f| %>
+    2:   
+    3: 
+    4:   <div class="field">
+  app/views/comments/_form.html.erb:1:in `_app_views_comments__form_html_erb___3016087272689931597_69959702385240'
+  app/views/comments/edit.html.erb:3:in `_app_views_comments_edit_html_erb___296366084575009435_35083080'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (4.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.9ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 18:56:50 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.8ms)
+  Rendered comments/_form.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (24.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 87ms (Views: 69.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:02:02 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (4.0ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (1.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered books/show.html.erb within layouts/application (31.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 124ms (Views: 92.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:02:03 +0100
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:02:05 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered comments/edit.html.erb within layouts/application (44.4ms)
+Completed 401 Unauthorized in 64ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `comment_path' for #<#<Class:0x00007f4184f97168>:0x00007f4187571348>
+Did you mean?  font_path):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @comment %> |
+    6: <%= link_to 'Back', comments_path %>
+  app/views/comments/edit.html.erb:5:in `_app_views_comments_edit_html_erb___296366084575009435_35083080'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (74.0ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:02:13 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/_form.html.erb (1.3ms)
+  Rendered comments/edit.html.erb within layouts/application (49.9ms)
+Completed 401 Unauthorized in 56ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `comment_path' for #<#<Class:0x00007f4184f97168>:0x00007f416806d230>
+Did you mean?  font_path):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @comment %> |
+    6: <%= link_to 'Back', comments_path %>
+  app/views/comments/edit.html.erb:5:in `_app_views_comments_edit_html_erb___296366084575009435_35083080'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:02:22 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.7ms)
+  Rendered comments/_form.html.erb (1.0ms)
+  Rendered books/show.html.erb within layouts/application (14.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:04:47 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/_form.html.erb (6.0ms)
+  Rendered comments/edit.html.erb within layouts/application (52.7ms)
+Completed 401 Unauthorized in 69ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `comment_path' for #<#<Class:0x00007f4184f97168>:0x00007f4168265e48>
+Did you mean?  font_path):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Show', @comment %> |
+    6: <%= link_to 'Back', comments_path %>
+  app/views/comments/edit.html.erb:5:in `_app_views_comments_edit_html_erb___296366084575009435_35083080'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (5.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.8ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:05:12 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/_form.html.erb (1.3ms)
+  Rendered comments/edit.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 72ms (Views: 66.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 19:05:13 +0100
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:05:58 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (1.2ms)
+  Rendered books/show.html.erb within layouts/application (12.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:06:17 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (3.5ms)
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/jan/BookClub/app/views/comments/edit.html.erb:3: syntax error, unexpected ')', expecting ']'
+...nd=( form_for([@book, @comment) );@output_buffer.safe_append...
+...                               ^
+/home/jan/BookClub/app/views/comments/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/home/jan/BookClub/app/views/comments/edit.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/comments/edit.html.erb:3: syntax error, unexpected ')', expecting ']'
+  app/views/comments/edit.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/comments/edit.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:07:37 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (47.3ms)
+Completed 401 Unauthorized in 60ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `comment_path' for #<#<Class:0x00007f4184f97168>:0x00007f41869aafa0>
+Did you mean?  font_path):
+    4: 
+    5: <% end %>
+    6: 
+    7: <%= link_to 'Show', @comment %> |
+    8: <%= link_to 'Back', comments_path %>
+  app/views/comments/edit.html.erb:7:in `_app_views_comments_edit_html_erb___296366084575009435_69959703940620'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (31.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.9ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:07:41 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.6ms)
+  Rendered comments/_form.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:07:46 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 47ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:07:49 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.7ms)
+  Rendered comments/_form.html.erb (0.8ms)
+  Rendered books/show.html.erb within layouts/application (13.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:08:08 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (37.9ms)
+Completed 401 Unauthorized in 55ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `comment_path' for #<#<Class:0x00007f4184f97168>:0x00007f4168483ce8>
+Did you mean?  font_path):
+     9:   </div>
+    10: <% end %>
+    11: 
+    12: <%= link_to 'Show', @comment %> |
+    13: <%= link_to 'Back', comments_path %>
+  app/views/comments/edit.html.erb:12:in `_app_views_comments_edit_html_erb___296366084575009435_69959449580760'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (12.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (54.9ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (69.9ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:08:51 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (0.7ms)
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/jan/BookClub/app/views/comments/edit.html.erb:12: syntax error, unexpected ( arg, expecting keyword_do or '{' or '('
+...d=( link_to 'Back', book_path (@book) );@output_buffer.safe_...
+...                               ^):
+  app/views/comments/edit.html.erb:12: syntax error, unexpected ( arg, expecting keyword_do or '{' or '('
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (33.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.6ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 57ms (Views: 47.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 19:09:32 +0100
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:09:35 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (4.8ms)
+  Rendered comments/_form.html.erb (1.0ms)
+  Rendered books/show.html.erb within layouts/application (15.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/4/edit" for 127.0.0.1 at 2018-03-03 19:09:39 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"4"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 4]]
+  Rendered comments/edit.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/books/1/comments/4" for 127.0.0.1 at 2018-03-03 19:10:11 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svm6Ac12zYMoKR6pQVor4ZMypw5ZkPmEGFtcdRoNYY95UYsMPCp6kiSIqQjY3R4NRcCNG30fQ28HGbIirdWI8A==", "comment"=>{"content"=>"rrrraaa"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"4"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "comments" SET "content" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["content", "rrrraaa"], ["updated_at", "2018-03-03 18:10:11.503055"], ["id", 4]]
+  [1m[36m (86.6ms)[0m  [1mcommit transaction[0m
+Completed 401 Unauthorized in 113ms (ActiveRecord: 88.4ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :id=>nil} missing required keys: [:id]):
+  app/controllers/comments_controller.rb:49:in `block (2 levels) in update'
+  app/controllers/comments_controller.rb:47:in `update'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.7ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.5ms)
+
+
+Started PATCH "/books/1/comments/4" for 127.0.0.1 at 2018-03-03 19:11:31 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"svm6Ac12zYMoKR6pQVor4ZMypw5ZkPmEGFtcdRoNYY95UYsMPCp6kiSIqQjY3R4NRcCNG30fQ28HGbIirdWI8A==", "comment"=>{"content"=>"rrrraaa"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"4"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.2ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :id=>nil} missing required keys: [:id]):
+  app/controllers/comments_controller.rb:49:in `block (2 levels) in update'
+  app/controllers/comments_controller.rb:47:in `update'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.2ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:11:33 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.6ms)
+  Rendered comments/_form.html.erb (1.0ms)
+  Rendered books/show.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:11:38 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/books/1/comments/1" for 127.0.0.1 at 2018-03-03 19:11:40 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MU0VVmwlJlBJHoLQHnAmMzbRI9S5sVETZgYy2smJQrX65SRbnXmRQUW/NXGH9xPf4CMJwZ0+6/h5RNyNflGryg==", "comment"=>{"content"=>"dsff"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.2ms)[0m  UPDATE "comments" SET "content" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["content", "dsff"], ["updated_at", "2018-03-03 18:11:40.715929"], ["id", 1]]
+  [1m[36m (56.2ms)[0m  [1mcommit transaction[0m
+Completed 401 Unauthorized in 67ms (ActiveRecord: 60.5ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :id=>nil} missing required keys: [:id]):
+  app/controllers/comments_controller.rb:49:in `block (2 levels) in update'
+  app/controllers/comments_controller.rb:47:in `update'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.1ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.3ms)
+
+
+Started POST "/books/1/comments" for 127.0.0.1 at 2018-03-03 19:13:32 +0100
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EYZTC6vZJ4sskIxbNr02z4E7ba5bRGRdeNIZVjbrm83aLmIGWoWQmiAxO/qvOgMjV8lHu3/L3rZnkPcBgTNysg==", "comment"=>{"content"=>"fvdv"}, "commit"=>"Create Comment", "book_id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "comments" ("content", "book_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["content", "fvdv"], ["book_id", 1], ["created_at", "2018-03-03 18:13:32.780187"], ["updated_at", "2018-03-03 18:13:32.780187"]]
+  [1m[36m (2315.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "comments" SET "user_id" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["user_id", 1], ["updated_at", "2018-03-03 18:13:35.101583"], ["id", 6]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 2332ms (ActiveRecord: 2323.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:13:35 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?[0m  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered books/show.html.erb within layouts/application (23.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:13:40 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBook Load (1.3ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1[0m  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 1.6ms)
+
+
+Started PATCH "/books/1/comments/1" for 127.0.0.1 at 2018-03-03 19:13:47 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rMN8f8wKxVEP6Bg7HzJpqCRIWCyOVj5EYKhanz54CCxna01yPVZyQANJr5qGtVxE8rpyOarZhK9/6rTIiaDhUw==", "comment"=>{"content"=>"dsffdddddddd"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.2ms)[0m  [1mUPDATE "comments" SET "content" = ?, "updated_at" = ? WHERE "comments"."id" = ?[0m  [["content", "dsffdddddddd"], ["updated_at", "2018-03-03 18:13:47.524570"], ["id", 1]]
+  [1m[35m (7.1ms)[0m  commit transaction
+Completed 401 Unauthorized in 13ms (ActiveRecord: 9.4ms)
+
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"books", :id=>nil} missing required keys: [:id]):
+  app/controllers/comments_controller.rb:49:in `block (2 levels) in update'
+  app/controllers/comments_controller.rb:47:in `update'
+
+
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/actionpack-4.2.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.5ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/jan/.rvm/gems/ruby-2.3.6/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.6ms)
+
+
+Started PATCH "/books/1/comments/1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rMN8f8wKxVEP6Bg7HzJpqCRIWCyOVj5EYKhanz54CCxna01yPVZyQANJr5qGtVxE8rpyOarZhK9/6rTIiaDhUw==", "comment"=>{"content"=>"dsffdddddddd"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 28ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (1.3ms)
+  Rendered books/show.html.erb within layouts/application (54.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 102ms (Views: 100.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/books.self-060d91b387869a94a68a791710aa320ee21e4a9e55fd5b035133990ef5acbc11.css?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/scaffolds.self-a81eea70955eb892cb9d98658c6a9b5a61a1351456027b4f698e403b0acce79c.css?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/books.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/turbolinks.self-2db6ec539b9190f75e1d477b305df53d12904d5cafdd47c7ffd91ba25cbec128.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2018-03-03 19:16:48 +0100
+
+
+Started GET "/books/1/comments/1/edit" for 127.0.0.1 at 2018-03-03 19:16:54 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.2ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 1]]
+  Rendered comments/edit.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/books/1/comments/1" for 127.0.0.1 at 2018-03-03 19:16:57 +0100
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Famcqvtq48SWVEnEci8q0tghGi+0t4xrbm8KfO4Km5XeAa2nCjZU1Zr1/mXrqB8+DtMwOpA4NoBxLeQrWdJy6g==", "comment"=>{"content"=>"dsffdddddddd123"}, "commit"=>"Update Comment", "book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.3ms)[0m  UPDATE "comments" SET "content" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["content", "dsffdddddddd123"], ["updated_at", "2018-03-03 18:16:57.243063"], ["id", 1]]
+  [1m[36m (113.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 127ms (ActiveRecord: 116.9ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:16:57 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (1.1ms)
+  Rendered books/show.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/books/1/comments/1" for 127.0.0.1 at 2018-03-03 19:19:50 +0100
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7y4oy6pnDZFDLIq6X5U/2qKh2DqipPImcIEpoH3J/1AkhhnGWzu6gE+NPRvGEgo2dFPyL4YrSM1vw8f3yhEWLw==", "book_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 1]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (1.2ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 51ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:19:50 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.8ms)
+  Rendered comments/_form.html.erb (1.5ms)
+  Rendered books/show.html.erb within layouts/application (19.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 85ms (Views: 83.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/books/1/comments/6" for 127.0.0.1 at 2018-03-03 19:19:53 +0100
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1+8aJOl3n7G/8dv5PZMPOky5rTcYGW/dqYBB2/EJPF4cRyspGCsooLNQbFikFDrWmkuHIjyW1Ta2wq+MRtHVIQ==", "book_id"=>"1", "id"=>"6"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 6]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 13ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:19:53 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered comments/_form.html.erb (2.0ms)
+  Rendered books/show.html.erb within layouts/application (14.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/books/1/comments/5" for 127.0.0.1 at 2018-03-03 19:19:56 +0100
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1/tuyk+aUKCpy8ZecZ5OqhmBrj6c6+lVTwRakk08/JwcU1/HvsbnsaVqcf/oGXtGz3OEK7hkU75QRrTF+uQV4w==", "book_id"=>"1", "id"=>"5"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 5]]
+  [1m[36m (81.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 91ms (ActiveRecord: 87.0ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:19:56 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered books/show.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (4.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 52ms (Views: 46.5ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/books/1/comments/4" for 127.0.0.1 at 2018-03-03 19:19:59 +0100
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bvyGfRsZ+Y5eti+Qt2p4vfAxrvJ7xFFy5u0SCBPikH6lVLdw6kVOn1IXmDEu7U1RJsOE519L65n5r/xfpDp5AQ==", "book_id"=>"1", "id"=>"4"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 4]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 13ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:19:59 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.3ms)
+  Rendered comments/_form.html.erb (1.2ms)
+  Rendered books/show.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/books/1/comments/3" for 127.0.0.1 at 2018-03-03 19:20:02 +0100
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pI4yfRf8FzSVgEV3ACnj/U3mbaA78ugdkYKd8reMCtZvJgNw5qCgJZkh8taZrtYRmxRHtR99UvaOwHOlAFTjqQ==", "book_id"=>"1", "id"=>"3"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "comments" WHERE "comments"."id" = ?  [["id", 3]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 15ms (ActiveRecord: 11.3ms)
+
+
+Started GET "/books/1" for 127.0.0.1 at 2018-03-03 19:20:02 +0100
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."book_id" = ?  [["book_id", 1]]
+  Rendered comments/_comment.html.erb (0.2ms)
+  Rendered comments/_form.html.erb (0.9ms)
+  Rendered books/show.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 51ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books/1/comments/2/edit" for 127.0.0.1 at 2018-03-03 19:20:06 +0100
+Processing by CommentsController#edit as HTML
+  Parameters: {"book_id"=>"1", "id"=>"2"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."book_id" = ? AND "comments"."id" = ? LIMIT 1  [["book_id", 1], ["id", 2]]
+  Rendered comments/edit.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 53ms (Views: 49.4ms | ActiveRecord: 0.4ms)

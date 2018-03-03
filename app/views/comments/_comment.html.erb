@@ -1,0 +1,4 @@
+<p><%=comment.content %></p>
+
+<%= link_to "Edit", edit_book_comment_path(comment.book, comment) %>
+<%= link_to "Delete", book_comment_path(comment.book, comment), method: :delete, data: {confirm: "Are you sure?"}%>
