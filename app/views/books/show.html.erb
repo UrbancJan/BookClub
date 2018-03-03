@@ -3,6 +3,7 @@
 
 
 <div class="ad-left">
+	<p>Posted by <%= @book.user.email%> <%= time_ago_in_words(@book.created_at) %> ago</p>
 <%= image_tag @book.image.url(:medium) %> <br>
 <%= link_to 'Back', books_path %> |
 <%= link_to 'Edit', edit_book_path(@book) %> |
