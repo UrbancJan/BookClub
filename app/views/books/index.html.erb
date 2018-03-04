@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Books</h1>
 
  <% @books.each do |book| %>
-<table>
+ 
+<table class="grid-item">
+
   <thead>
+
     <tr>
       <th><%= book.title %></th>
     </tr>
@@ -27,6 +29,8 @@
 </tfoot>
 
 </table>
+</div>
+
   <% end %>
 <br>
 
