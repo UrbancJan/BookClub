@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<div class="wrap">
 
+<div class="divLeft">
+	<p>Posted by <b><%= @book.user.email%></b> <%= time_ago_in_words(@book.created_at) %> ago</p>
 
-<div class="ad-left">
-	<p>Posted by <%= @book.user.email%> <%= time_ago_in_words(@book.created_at) %> ago</p>
-<%= image_tag @book.image.url(:medium) %> <br>
+<%= image_tag @book.image.url(:medium), :class => "show_img" %> <br>
 <%= link_to 'Back', books_path %> |
 <% if user_signed_in? %>
 <% if @book.user_id == current_user.id %>
@@ -14,7 +15,9 @@
 <%end%>
 </div>
 
-<div class="ad-right">
+
+
+<div class="divRight">
 <p>
   <strong>Title:</strong>
   <%= @book.title %>
@@ -31,10 +34,17 @@
 </p>
 </div>
 
+
+
+
+<div class="divComment">
 <h3>Comments: </h3>
 <%= render @book.comments%>
+
 
 <h3>Reply: </h3>
 <%= render 'comments/form' %>
 
+</div>
 
+</div>
