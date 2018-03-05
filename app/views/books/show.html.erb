@@ -4,7 +4,7 @@
 
 <div class="divLeft">
 	<p>Posted by <b><%= @book.user.email%></b> <%= time_ago_in_words(@book.created_at) %> ago</p>
-
+<div class="links">
 <%= image_tag @book.image.url(:medium), :class => "show_img" %> <br>
 <%= link_to 'Back', books_path %> |
 <% if user_signed_in? %>
@@ -13,6 +13,7 @@
 <%= link_to 'Destroy', @book, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%end%>
 <%end%>
+</div>
 </div>
 
 
@@ -38,8 +39,8 @@
 
 
 <div class="divComment">
-<h3>Comments: </h3>
-<%= render @book.comments%>
+<h3>Comments </h3>
+<%= render @book.comments.order(created_at: :desc)%>
 
 
 <h3>Reply: </h3>

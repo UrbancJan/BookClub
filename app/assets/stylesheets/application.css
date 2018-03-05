@@ -14,6 +14,10 @@
  *= require_self
  */
 
+.all {
+  font-size: 40px;
+ }
+
 h1 {
     font-size: 40px;
 }
@@ -57,6 +61,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    font-size: 20px;
 
 }
 
@@ -90,20 +95,25 @@ li a:hover:not(.active) {
 
 .divRight {
  display: inline-block;
-    width: 560px;
+    width: 800px;
     margin: 10px;
     background-color: white;
   	box-shadow: 3px 3px 3px 3px  rgba(0,0,0,0.1); 
   	border-radius:8px;
   	padding-left: 50px;
   	padding-right: 50px;
+                                                                                  
   
+}
+p{
+font-size: 20px;
+line-height: 1.6;
 }
 
 
 .wrap{
 	max-width: 960px;
-    margin: auto;
+  margin: auto;
 }
 
 .show_img {
@@ -117,15 +127,24 @@ li a:hover:not(.active) {
 
 .divComment{
 	 display: inline-block;
-    width: 560px;
+    width: 800px;
     margin: 10px;
     background-color: white;
   	box-shadow: 3px 3px 3px 3px  rgba(0,0,0,0.1); 
   	border-radius:8px;
   	padding-left: 50px;
   	padding-right: 50px;
+
+    font-size: 20px;
+line-height: 1.6;
 }
 
+.comment{
+border-bottom: 1px solid black;
+  padding-top: 15px;
+padding-bottom: 15px;
+
+}
 
 
 .border{
@@ -134,13 +153,26 @@ li a:hover:not(.active) {
 
 
 .edit{
-	max-width: 960px;
-    margin: auto;
+	position: absolute;
+  width: 400px;
+  z-index: 15;
+  left: 50%;
+  margin-right: 0;
+  margin-left: -150px;
+  margin-top: 25px;
+
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px  rgba(0,0,0,0.1); 
+  border-radius:8px;
+ 
   }
 
-.comment{
-border-bottom: 1px solid black;
-  padding-top: 15px;
-padding-bottom: 15px;
 
+.form{
+font-size: 20px;
+line-height: 1.6;
+}
+
+.links{
+  font-size: 20px;
 }
