@@ -1,28 +1,277 @@
-== README
+1. Najprej sem ostvaril nov projekt 
+<tt>rails new BookClub</tt>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+V terminal sem nato vpisal naslednjo komando
+<tt> rails generate scaffold Book title:string author:string description:text </tt>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ter pognal migracijo
+<tt>rake db:migrate</tt>
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+4. Za dodajanje slik knjig sem uporabil paperclip gem. Najprej sem moral naložiti imagemagick za delovanje
+paperclip gema. To sem storil da sem v terminal vnesel komando 
+<tt>sudo apt-get install imagemagick</tt>
+
+V gemfile sem dal 
+<tt>gem "paperclip", "~> 5.2.1 </tt>
+in v terminalu zagnal 
+<tt>bundle </tt>
+da se je gem naložil.
+
+V app/models/book.rb sem vnesel 
+<tt>has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" } 
+validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/</tt>
+
+Da sem ustvaril migracijo sem v terminal napisal 
+<tt>rails generate paperclip book image</tt>
+To spremeni tabelo books in doda image attachment
+
+Dodamo 
+<tt>rake db:migrate</tt>
+
+Nato sem v app/views/books/_form.html.erb dodal
+
+na vrhu html: { multipart: true }
+
+ter
+<tt>
+ <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+</tt>
+
+v app/controllers/concerns/books_controller.rb sem v 
+def book_params dodal
+:image
+<tt>
+params.require(:book).permit(:title, :author, :description, :image)
+</tt>
+
+v app/views/show.html.erb da se bo slika videla sem dodal 
+<tt><%= image_tag @book.image.url(:medium) %></tt>
+
+Da se bodo slike videle na prvi strani sem v index.html.erb dodal 
+<tt><td><%= image_tag book.image.url(:thumb) %></td></tt>
+
+
+Totorial, ki sem ga uprabil https://www.youtube.com/watch?v=Z5W-Y3aROVE
+
+5.
+
+Nato sem naložil devise gem
+
+v gem file sem dodal 
+<tt>gem 'devise' </tt>
+
+in v terminal zagnal 
+<tt>bundle install</tt>
+
+nato pa 
+<tt>rails generate devise:install</tt>
+
+
+Pote pa 
+<tt>rails generate devise User</tt>
+
+To naredi tabelo user
+nato pa 
+<tt>rake db:migrate</tt>
+
+
+6. 
+Dodal sem nav bar zato da ni trba pisati v url
+v app/views/layouts/application.html.erb sem dodal
+<tt>
+<div>
+	<%= link_to "BookClub", root_path %>
+
+	<ul>
+		<% if !user_signed_in? %>
+		<li><%= link_to "Sign Up", new_user_registration_path %></li>
+		<% end %>
+		<% if user_signed_in? %>
+		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+		<% else %>
+		<li><%= link_to "Login", new_user_session_path %> </li>
+		<% end %>
+	</ul>
+	<% if user_signed_in? %>
+		<p><%= link_to "New Book", new_book_path %></p>
+
+	<% end %>
+</div>
+</tt>
+
+7.
+da naredimo povezavo med user in book sem naredil 
+<tt>rails g migration add_user_id_to_books user_id:integer </tt>
+To doda user_id v books 
+
+nato pa
+<tt>rake db:migrate</tt>
+
+potem sem ustvaril asociacije
+v app/models/book.rb sem dodal 
+<tt>belongs_to :user</tt>
+
+v app/models/user.rb sem dodal 
+<tt>has_many :books</tt>
+
+
+POtem sem v app/controllers/books_controller.rb
+
+<tt>
+ def new
+    @book = current_user.books.build
+  end
+</tt>
+
+ter
+
+<tt>
+  def create
+    @book = current_user.books.build(book_params)
+</tt>
+
+8. Komentarji
+
+<tt>rails g scaffold Comment content:text book:references user:references</tt>
+
+<tt>rake db:migrate</tt>
+
+references ustvarijo naslednje odvisnosti v comment.rb modelu
+belong_to: book
+belong_to: user
+
+
+
+v app/models/book.rb
+sem dodal  
+<tt>has_many :comments</tt>
+
+v app/models/user.rb
+<tt>has_many :comments</tt>
+
+
+v config/routes.rb sem dodal do 
+<tt>
+resources :books do  
+  resources :comments
+end
+</tt>
+
+v comments_controller.rb sem dodal
+<tt>
+  def create
+    @book = Book.find(params[:book_id])  //najdemo knjigo
+    @comment = @book.comments.create(comment_params) // naredimo komentar glede na knjigo
+    @comment.user_id = current_user.id // naredimo komentar glede na trenutni user
+</tt>
+
+
+v app/views/comments/_form.html.erb
+<tt>
+<%= form_for([@book, @book.comment.build]) do |f| %>
+
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</tt>
+
+v views/books/show.html.erb sem dodal 
+<tt>
+<%= render 'comments/form' %> 
+</tt>
+s tem lahko vidimo form za vpisovanje komentarjev 
+
+
+nato sem v comments naredil nov _comment.html.erb file in dodal 
+<tt>
+<p><%=comment.content %></p>
+</tt>
+S tem dobivamo vsebino komentarja
+
+v books/show.html.erb sem dodal
+<tt>
+<%= render @book.comments%> 
+</tt>
+da vidimo komentarje
+
+
+v _comment.html.erb sem dodal še linke do delete in edit
+<tt>
+<%= link_to "Edit", edit_book_comment_path(comment.book, comment) %>   //comment.book najde id knjige, comment pa najde id komentarja
+<%= link_to "Delete", book_comment_path(comment.book, comment), method: :delete, data: {confirm: "Are you sure?"}%>
+</tt>
+
+
+
+v comments_controller.rb sem naredil slednje:
+
+<tt>
+  def edit
+    @book = Book.find(params[:book_id])  // najde knjigo
+    @comment = @book.comments.find(params[:id]) // najde komentar, ki ustreza id 
+  end
+</tt>
+
+<tt>
+  def destroy
+    @comment.destroy
+    respond_to do |format|
+      format.html { redirect_to book_path(@book = Book.find(params[:book_id])), notice: 'Comment was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+</tt>
+
+
+
+v books/show.html.erb sem dodal
+
+<tt>
+<p>Posted by <%= @book.user.email%> <%= time_ago_in_words(@book.created_at) %> ago</p>
+</tt>
+
+v comments/_comment.html.erb sem dodal
+
+<tt>
+<p>Posted by: <%=comment.user.email %> <%= time_ago_in_words(comment.created_at) %> ago</p>
+</tt>
+
+
+
+v books/show.html.erb sem dodal
+<tt>
+<% if user_signed_in? %>
+<% if @book.user_id == current_user.id %> 
+</tt>
+
+da lahko briše in spreminja samo lastnik objave
+
+
+
+v comments/_comment.html.erb sem dodal
+
+<tt>
+<% if user_signed_in? %>
+<% if comment.user_id == current_user.id %>
+</tt>
+
+Nato sem v controllers/books_controller.rb dodal
+<tt>
+ before_filter :authenticate_user!, except: [:index, :show]
+</tt>
+
+v comments_controller.rb sem dodal
+<tt>
+ before_filter :authenticate_user!
+</tt>
+
+
