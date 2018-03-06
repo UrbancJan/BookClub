@@ -89,9 +89,11 @@ v app/views/layouts/application.html.erb sem dodal
 		<% if !user_signed_in? %>
 		<li><%= link_to "Sign Up", new_user_registration_path %></li>
 		<% end %>
+		
 		<% if user_signed_in? %>
 		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
 		<% else %>
+		
 		<li><%= link_to "Login", new_user_session_path %> </li>
 		<% end %>
 	</ul>
@@ -118,17 +120,17 @@ v app/models/user.rb sem dodal
 <tt>has_many :books</tt>
 
 
-POtem sem v app/controllers/books_controller.rb
+Potem sem v app/controllers/books_controller.rb
 
 
- <tt>def new
+ def new
     @book = current_user.books.build
-  end</tt>
+  end
 
 ter
 
- <tt>def create
-    @book = current_user.books.build(book_params)</tt>
+ <def create
+    @book = current_user.books.build(book_params)
 
 
 8. Komentarji
@@ -152,9 +154,10 @@ v app/models/user.rb
 
 
 v config/routes.rb sem dodal do 
-<tt>resources :books do  
+
+  resources :books do  
   resources :comments
-end</tt>
+  end
 
 
 v comments_controller.rb sem dodal
