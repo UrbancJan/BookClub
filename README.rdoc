@@ -82,26 +82,24 @@ nato pa
 Dodal sem nav bar zato da ni trba pisati v url
 v app/views/layouts/application.html.erb sem dodal
 
-<div>
-	<%= link_to "BookClub", root_path %>
+	<div>
+		<%= link_to "BookClub", root_path %>
+		<ul>
+			<% if !user_signed_in? %>
+			<li><%= link_to "Sign Up", new_user_registration_path %></li>
+			<% end %>
 
-	<ul>
-		<% if !user_signed_in? %>
-		<li><%= link_to "Sign Up", new_user_registration_path %></li>
-		<% end %>
-		
+			<% if user_signed_in? %>
+			<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+			<% else %>
+
+			<li><%= link_to "Login", new_user_session_path %> </li>
+			<% end %>
+		</ul>
 		<% if user_signed_in? %>
-		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-		<% else %>
-		
-		<li><%= link_to "Login", new_user_session_path %> </li>
+			<p><%= link_to "New Book", new_book_path %></p>
 		<% end %>
-	</ul>
-	<% if user_signed_in? %>
-		<p><%= link_to "New Book", new_book_path %></p>
-
-	<% end %>
-</div>
+	</div>
 
 
 7.
@@ -162,25 +160,25 @@ v config/routes.rb sem dodal do
 
 v comments_controller.rb sem dodal
 
-  <tt>def create
+  def create
     @book = Book.find(params[:book_id])  //najdemo knjigo
     @comment = @book.comments.create(comment_params) // naredimo komentar glede na knjigo
     @comment.user_id = current_user.id // naredimo komentar glede na trenutni user
-</tt>
+
 
 
 v app/views/comments/_form.html.erb
 
-<tt><%= form_for([@book, @book.comment.build]) do |f| %>
+<%= form_for([@book, @book.comment.build]) do |f| %>
 
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %></tt>
+	  <div class="field">
+	    <%= f.label :content %><br>
+	    <%= f.text_area :content %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+<% end %>
 
 v views/books/show.html.erb sem dodal 
 <tt><%= render 'comments/form' %></tt>
@@ -206,10 +204,10 @@ v _comment.html.erb sem dodal še linke do delete in edit
 v comments_controller.rb sem naredil slednje:
 
 
-  <tt>def edit
+  def edit
     @book = Book.find(params[:book_id])  // najde knjigo
     @comment = @book.comments.find(params[:id]) // najde komentar, ki ustreza id 
-  end</tt>
+  end
 
 
 
