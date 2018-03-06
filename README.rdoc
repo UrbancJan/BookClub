@@ -82,8 +82,8 @@ nato pa
 6. 
 Dodal sem nav bar zato da ni trba pisati v url
 v app/views/layouts/application.html.erb sem dodal
-
-<tt><div>
+```
+<div>
 	<%= link_to "BookClub", root_path %>
 
 	<ul>
@@ -100,8 +100,8 @@ v app/views/layouts/application.html.erb sem dodal
 		<p><%= link_to "New Book", new_book_path %></p>
 
 	<% end %>
-</div></tt>
-
+</div>
+```
 
 7.
 da naredimo povezavo med user in book sem naredil 
