@@ -1,7 +1,5 @@
-http://localhost:3000/ 
 
-
-Najprej sem ostvaril nov projekt 
+Najprej sem ustvaril nov projekt 
 <tt>rails new BookClub</tt>
 
 V terminal sem nato vpisal naslednjo komando
@@ -177,13 +175,21 @@ v comments_controller.rb sem dodal
 v app/views/comments/_form.html.erb sem dodal
 
 <%= form_for([@book, @book.comment.build]) do |f| %>
+
 <div class="field">
+
 <%= f.label :content %><br>
+
 <%= f.text_area :content %>
+
 </div>
+
 <div class="actions">
+
 <%= f.submit %>
+
 </div>
+
 <% end %>
 
 
